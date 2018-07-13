@@ -1,0 +1,9 @@
+<h1>Editing Link</h1>
+
+<%= render 'form', link: @link %>
+<%= label_tag(:title, "Title") %>
+<%= text_field(:link, :title) %>
+<%= label_tag(:title, "URL") %>
+<%= text_field(:link, :url) %>
+<%= link_to 'Show', @link %> |
+<%= link_to 'Back', links_path %>
