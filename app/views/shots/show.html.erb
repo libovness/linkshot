@@ -1,14 +1,13 @@
-<p id="notice"><%= notice %></p>
+<h2 id="shot-name"><%= @shot.name %></h2>
+<h6 id="created">Created by &nbsp; <%= image_tag @shot.user.profile_image, id: 'small-avatar', class: 'avatar' %> <%= @shot.user.name %></h6>
+<ul class="link-list">
+	<% @shot.links.each do |link| %>
+		<li>
+			<%= link_to link.title, link.url %>
+		</li>
+	<% end %>
+</ul>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @shot.slug %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @shot.name %>
-</p>
-
-<%= link_to 'Edit', edit_shot_path(@shot) %> |
-<%= link_to 'Back', shots_path %>
+<% if @shot.user == current_user %>
+	<%= link_to 'Edit', edit_shot_path(@shot), class: 'edit-link-list' %>
+<% end %>

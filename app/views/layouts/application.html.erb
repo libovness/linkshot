@@ -17,7 +17,7 @@
 				      <% if current_user %>
 				          <li>
 				          	<%= link_to user_path(current_user), class: "nav-link" do %>
-				          		<%= image_tag current_user.profile_image, id: 'avatar' %>
+				          		<%= image_tag current_user.profile_image, class: 'avatar' %>
 				          		<%= '@' + current_user.name %>
 				          	<% end %>
 				          </li>

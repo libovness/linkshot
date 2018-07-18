@@ -30,6 +30,24 @@ body {
 h1, h2, h3, h4, h5, h6, p, label {
 	color: $darkblue;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 800;
+}
+h2#shot-name {
+	margin-bottom: 1rem;
+	font-size:2.4rem;
+	margin-top: 0.4rem;
+	line-height: 48px;
+}
+h6#created {
+	text-transform:uppercase;
+	font-size: 0.8rem;
+	margin-bottom: 1.6rem;
+	margin-top: 0;
+}
+span#time-ago {
+	text-transform:lowercase;
+}
 a {
 	color: $lightblue;
 }
@@ -94,23 +112,22 @@ input[id^=shot_links] {
 div.shot-link-field {
 	margin-bottom: 24px;
 }
-input[type="submit"], a.add_fields {
+input[type="submit"], a.add_fields, a.edit-link-list {
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	font-size:0.8em;
 	font-weight:600;
 	border-radius: 2px;
+	padding:11px 14px 9px 14px;
 }
-a.add_fields {
+a.add_fields, a.edit-link-list {
 	color: $darkblue;
 	background-color: none;
-	border: 2px solid $darkblue;
-	padding:0.7em 1em 0.5em 1em;
+	border: 2px solid $darkblue;	
 }
 input[type="submit"] {
 	background-color: $darkblue;
 	color: $lightgray;
-	padding:0.5em 1em 0.4em 1em;
 }
 input[type="submit"]:hover {
 	cursor:pointer;
@@ -147,10 +164,23 @@ div.main {
 	box-shadow: 0px 0px 8px rgba(63,76,88,0.2);
 	border-radius: 2px;
 }
-img#avatar {
+img.avatar {
 	height: 24px;
 	width: 24px;
 	margin-right: 4px;
 	margin-bottom:3px;
 	border-radius: 3px;
+}
+img#small-avatar {
+	height: 20px;
+	width: 20px;
+}
+ul.link-list {
+	list-style-type: none;	
+	padding:0;
+	margin-left: 0;
+	li {
+		margin-bottom:8px;
+	}
+	margin-bottom:44px;
 }
