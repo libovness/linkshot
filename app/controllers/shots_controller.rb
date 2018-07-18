@@ -67,7 +67,7 @@ class ShotsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_shot
-      @shot = Shot.find(params[:id])
+      @shot = Shot.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

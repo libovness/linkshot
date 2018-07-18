@@ -4,12 +4,6 @@ class SessionsController < ApplicationController
     session[:user_id] = @user.id
     redirect_to root_path
   end
- 
-  protected
- 
-  def auth_hash
-    request.env['omniauth.auth']
-  end
 
   def destroy
     if current_user
@@ -17,6 +11,12 @@ class SessionsController < ApplicationController
       flash[:success] = "Sucessfully logged out!"
     end
     redirect_to root_path
+  end
+ 
+  protected
+ 
+  def auth_hash
+    request.env['omniauth.auth']
   end
 
 end

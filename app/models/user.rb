@@ -12,6 +12,9 @@ class User < ApplicationRecord
 	      secret: auth_hash.credentials.secret
 	    )
 	    user
-	  end
+	end
+
+	extend FriendlyId
+  	friendly_id :name, use: :slugged
 
 end
