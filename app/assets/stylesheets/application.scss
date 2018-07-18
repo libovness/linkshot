@@ -27,13 +27,13 @@ body {
 	color: $darkblue;
 	padding-bottom: 72px;
 }
-h1, h2, h3, h4, h5, h6, p, label {
+h1, h2, h3, h4, h5, h6, p, label, a.shot-list-link  {
 	color: $darkblue;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a.shot-list-link {
 	font-weight: 800;
 }
-h2#shot-name {
+h2#shot-name, a.shot-list-link {
 	margin-bottom: 0.6rem;
 	font-size:2.4rem;
 	margin-top: 0.4rem;
@@ -44,6 +44,15 @@ h6#created {
 	font-size: 0.8rem;
 	margin-bottom: 1.4rem;
 	margin-top: 0;
+}
+ul#shot-list li:first-child {
+	margin-top: 6px;
+}
+ul#shot-list > li {
+	margin-bottom: 36px;
+}
+ul#shot-list {
+	padding-bottom: 8px !important;
 }
 span#time-ago {
 	text-transform:lowercase;
@@ -83,7 +92,7 @@ input[type="text"] {
 .shot-field {
 	margin-bottom: 2em;
 }
-label {
+label, h6#shot-page-title {
 	font-weight:800;
 	letter-spacing: 0.2em;
 	margin-bottom:0;
@@ -93,6 +102,11 @@ label {
 label[for=shot_name] {
 	font-size:0.8em;
 	margin-bottom: 6px;
+}
+h6#shot-page-title {
+	font-size:0.8em;
+	margin-top: 4px;
+	padding-bottom: 14px;
 }
 label[for^=shot_links], label[for^=shot_published] {
 	font-size:0.6em;
@@ -180,12 +194,13 @@ img#small-avatar {
 	width: 20px;
 	margin-bottom:0;
 }
-ul.link-list {
+ul.link-list, ul#shot-list {
 	list-style-type: none;	
 	padding:0;
 	margin-left: 0;
-	li {
-		margin-bottom:8px;
-	}
 	margin-bottom:44px;
+}
+
+ul.link-list > li {
+	margin-bottom:8px;
 }

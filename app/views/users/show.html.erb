@@ -1,6 +1,17 @@
-<p id="notice"><%= notice %></p>
-<% user.shots.each do |shot| %>
-	<%= shot %>
+<h6 id="shot-page-title">
+	<% if @user == current_user %>	
+		My shots
+	<% else %>
+		<%= @user.name %>'s shots
+	<% end %>
+</h6>
+<ul id="shot-list">
+	<% @user.shots.each do |shot| %>
+		<li>
+			<%= link_to shot.name, shot, class: "shot-list-link" %>
+		</li>
+	<% end %>
+</ul>
+<% if @user == current_user %>
+	<%= link_to 'Create a new linkshot', new_shot_path, class: 'edit-link-list' %>
 <% end %>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>

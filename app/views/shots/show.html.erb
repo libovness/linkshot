@@ -9,7 +9,6 @@
 		</li>
 	<% end %>
 </ul>
-
 <% if @shot.user == current_user %>
 	<%= link_to 'Edit', edit_shot_path(@shot), class: 'edit-link-list' %>
 <% end %>
