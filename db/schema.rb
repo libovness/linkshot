@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180713184923) do
+ActiveRecord::Schema.define(version: 20180718011600) do
 
   create_table "links", force: :cascade do |t|
     t.string "title"
@@ -19,6 +19,8 @@ ActiveRecord::Schema.define(version: 20180713184923) do
     t.datetime "updated_at", null: false
     t.boolean "suggested"
     t.boolean "accepted"
+    t.integer "shot_id"
+    t.index ["shot_id"], name: "index_links_on_shot_id"
   end
 
   create_table "shots", force: :cascade do |t|
@@ -26,6 +28,9 @@ ActiveRecord::Schema.define(version: 20180713184923) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.boolean "published", default: true
+    t.index ["user_id"], name: "index_shots_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,6 +38,12 @@ ActiveRecord::Schema.define(version: 20180713184923) do
     t.string "avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.string "name"
+    t.string "token"
+    t.string "secret"
+    t.string "profile_image"
   end
 
 end

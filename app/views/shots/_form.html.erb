@@ -2,7 +2,6 @@
   <% if shot.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(shot.errors.count, "error") %> prohibited this shot from being saved:</h2>
-
       <ul>
       <% shot.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -10,18 +9,19 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :slug %>
-    <%= form.text_field :slug, id: :shot_slug %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
+  <div class="field shot-field">
+    <%#= form.label :name %>
+    <%= form.label :name, 'Name your linkshot' %>
     <%= form.text_field :name, id: :shot_name %>
   </div>
-
+  <%= render 'links/shot_link_form', form: form %>
   <div class="actions">
-    <%= form.submit %>
+    <div class="publish-action">
+      <%= form.check_box :published, default: :checked %>
+      <%= form.label :published, 'Make this public' %>
+    </div>
+    <div class="submit-action">
+      <%= form.submit 'Save & publish' %>
+    </div>
   </div>
 <% end %>

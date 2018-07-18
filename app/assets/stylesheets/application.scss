@@ -14,33 +14,103 @@
 
 @import "bootstrap";
 
-$gray: #ECECEC;
-$darkblue: #1F2629;
-$purple: #B149B7;
+$lightgray: #E6E8E7;
+$lightblue: #879AAC;
+$darkblue: #3F4C58;
+$verydarkblue: #2A2E32;
 
 body {
-	background-color: $gray;
-	font-family: "FreightSans Pro";
+	background-color: $lightgray;
+	font-family: "Verlag";
+	font-weight: 500;
+	font-size: 1.2em;
+	color: $darkblue;
 }
-
-.left-col {
-
-}
-
 h1, h2, h3, h4, h5, h6, p, label {
 	color: $darkblue;
 }
-
-a {
-	color: $purple;
-}
-
 a.navbar-brand {
 	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 0.2em;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	font-family:"Verlag";
+	font-size:1.4em;
+	color: $darkblue;
+	margin-top:7px;
 }
-
+a.nav-link {
+	color: $lightblue;
+	margin-top:12px;
+}
+a.nav-link:hover {
+	color: $darkblue;
+}
 nav.navbar {
 	padding-left: 0;
+	margin-bottom: 76px;
+}
+input[type="text"] {
+	background-color: $lightgray;
+	outline: none;
+	border: 0;
+	border-bottom: 2px solid $lightblue;
+	width: 100%;
+	font-size: 1.8em;
+	font-weight: 600;
+	color: $darkblue;
+}
+.shot-field {
+	margin-bottom: 2em;
+}
+label {
+	font-weight:800;
+	letter-spacing: 0.2em;
+	margin-bottom:0;
+	text-transform: uppercase;
+	color: $lightblue;
+}
+label[for=shot_name] {
+	font-size:0.8em;
+	margin-bottom: 6px;
+}
+label[for^=shot_links], label[for^=shot_published] {
+	font-size:0.6em;
+	margin-bottom: 0;
+	font-weight:600px;
+}
+input#shot_name {
+	font-size:2em;
+	margin-bottom:25px;
+}
+input[id^=shot_links] {
+	font-size:1em;
+	line-height:1em;
+	margin-bottom:17px;
+	border-bottom-width: 1px;
+}
+div.shot-link-field {
+	margin-bottom: 24px;
+}
+input[type="submit"] {
+	background-color: $darkblue;
+	color: $lightgray;
+	padding:0.5em 1em 0.4em 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-size:0.8em;
+	font-weight:600;
+}
+input[type="submit"]:hover {
+	cursor:pointer;
+}
+input[type="checkbox"] {
+	margin-right:4px;
+}
+div.publish-action {
+	float:left;
+	margin-top:12px;
+}
+div.submit-action {
+	float:right;
+	margin-top:6px;
 }

@@ -15,6 +15,7 @@ class ShotsController < ApplicationController
   # GET /shots/new
   def new
     @shot = Shot.new
+    2.times {@shot.links.build}
   end
 
   # GET /shots/1/edit
@@ -69,6 +70,6 @@ class ShotsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shot_params
-      params.require(:shot).permit(:slug, :name)
+      params.require(:shot).permit(:slug, :name, links_attributes: [:id, :name, :url, :_destroy])
     end
 end

@@ -30,9 +30,11 @@ class LinksController < ApplicationController
       if @link.save
         format.html { redirect_to @link, notice: 'Link was successfully created.' }
         format.json { render :show, status: :created, location: @link }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @link.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -44,9 +46,11 @@ class LinksController < ApplicationController
       if @link.update(link_params)
         format.html { redirect_to @link, notice: 'Link was successfully updated.' }
         format.json { render :show, status: :ok, location: @link }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @link.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -58,6 +62,7 @@ class LinksController < ApplicationController
     respond_to do |format|
       format.html { redirect_to links_url, notice: 'Link was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
