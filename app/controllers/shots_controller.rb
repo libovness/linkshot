@@ -26,7 +26,9 @@ class ShotsController < ApplicationController
   # POST /shots.json
   def create
     @shot = Shot.new(shot_params)
-
+    if current_user 
+      @shot.user = current_user
+    end
     respond_to do |format|
       if @shot.save
         format.html { redirect_to @shot, notice: 'Shot was successfully created.' }

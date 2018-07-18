@@ -16,7 +16,10 @@
   					<ul class="navbar-nav ml-auto">
 				      <% if current_user %>
 				          <li>
-				          	<%= link_to '@' + current_user.name, user_path(current_user), class: "nav-link" %>
+				          	<%= link_to user_path(current_user), class: "nav-link" do %>
+				          		<%= image_tag current_user.profile_image, id: 'avatar' %>
+				          		<%= '@' + current_user.name %>
+				          	<% end %>
 				          </li>
 				          <li>
 				          	<%= link_to 'log out', logout_path, method: :delete, class: "nav-link" %>
@@ -29,8 +32,11 @@
   			</div>
   		</div>
   		<div class="row">
-  			<div class="col col-md-6 offset-md-3">
-    			<%= yield %>
+  			<div class="col col-md-6 offset-md-3 main">
+  				<div class="row">
+  					<div class="col col-md-10 offset-md-1">
+    					<%= yield %>
+    				</div>
     		</div>
     	</div>
     </div>

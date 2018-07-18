@@ -25,6 +25,7 @@ body {
 	font-weight: 500;
 	font-size: 1.2em;
 	color: $darkblue;
+	padding-bottom: 72px;
 }
 h1, h2, h3, h4, h5, h6, p, label {
 	color: $darkblue;
@@ -50,10 +51,9 @@ a.nav-link {
 }
 nav.navbar {
 	padding-left: 0;
-	margin-bottom: 76px;
+	margin-bottom: 24px;
 }
 input[type="text"] {
-	background-color: $lightgray;
 	outline: none;
 	border: 0;
 	border-bottom: 2px solid $lightblue;
@@ -99,6 +99,7 @@ input[type="submit"], a.add_fields {
 	text-transform: uppercase;
 	font-size:0.8em;
 	font-weight:600;
+	border-radius: 2px;
 }
 a.add_fields {
 	color: $darkblue;
@@ -140,5 +141,16 @@ div.links {
 div.links > div.nested-fields {
 	margin-bottom:60px;
 }
-
-
+div.main {
+	background-color: #fff;
+	padding:66px 24px;
+	box-shadow: 0px 0px 8px rgba(63,76,88,0.2);
+	border-radius: 2px;
+}
+img#avatar {
+	height: 24px;
+	width: 24px;
+	margin-right: 4px;
+	margin-bottom:3px;
+	border-radius: 3px;
+}

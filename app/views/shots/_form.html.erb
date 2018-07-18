@@ -19,14 +19,18 @@
       <%= render 'link_fields', :form => link %>
     <% end %>
   </div>
-  <div class="actions">
-    <div class="publish-action">
-      <%= form.check_box :published, default: :checked %>
-      <%= form.label :published, 'Make this public' %>
+  <% if shot.id.nil? or shot.user == current_user %>
+    <div class="actions">
+      <div class="publish-action">
+        <div class="custom-checkbox">
+          <%= form.check_box :published, default: :checked %>
+          <%= form.label :published, 'Make public' %>
+        </div>
+      </div>
+      <div class="submit-action">
+        <%= link_to_add_association 'add a link', form, :links, form_name: 'form', data: {association_insertion_node: '.links', association_insertion_method: :append } %>
+        <%= form.submit 'Save' %>
+      </div>
     </div>
-    <div class="submit-action">
-      <%= link_to_add_association 'add a link', form, :links, form_name: 'form', data: {association_insertion_node: '.links', association_insertion_method: :append } %>
-      <%= form.submit 'Save' %>
-    </div>
-  </div>
+  <% end %>
 <% end %>
