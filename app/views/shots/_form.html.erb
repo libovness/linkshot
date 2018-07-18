@@ -1,4 +1,4 @@
-<%= form_with(model: shot, local: true) do |form| %>
+<%= form_with(model: shot, remote: true) do |form| %>
   <% if shot.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(shot.errors.count, "error") %> prohibited this shot from being saved:</h2>
@@ -14,14 +14,19 @@
     <%= form.label :name, 'Name your linkshot' %>
     <%= form.text_field :name, id: :shot_name %>
   </div>
-  <%= render 'links/shot_link_form', form: form %>
+  <div class="links">
+    <%= form.fields_for :links do |link| %>
+      <%= render 'link_fields', :form => link %>
+    <% end %>
+  </div>
   <div class="actions">
     <div class="publish-action">
       <%= form.check_box :published, default: :checked %>
       <%= form.label :published, 'Make this public' %>
     </div>
     <div class="submit-action">
-      <%= form.submit 'Save & publish' %>
+      <%= link_to_add_association 'add a link', form, :links, form_name: 'form', data: {association_insertion_node: '.links', association_insertion_method: :append } %>
+      <%= form.submit 'Save' %>
     </div>
   </div>
 <% end %>

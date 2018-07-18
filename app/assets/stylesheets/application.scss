@@ -29,6 +29,13 @@ body {
 h1, h2, h3, h4, h5, h6, p, label {
 	color: $darkblue;
 }
+a {
+	color: $lightblue;
+}
+a:hover {
+	color: $darkblue;
+	text-decoration:none;
+}
 a.navbar-brand {
 	text-transform: uppercase;
 	font-weight: 800;
@@ -39,11 +46,7 @@ a.navbar-brand {
 	margin-top:7px;
 }
 a.nav-link {
-	color: $lightblue;
 	margin-top:12px;
-}
-a.nav-link:hover {
-	color: $darkblue;
 }
 nav.navbar {
 	padding-left: 0;
@@ -91,14 +94,22 @@ input[id^=shot_links] {
 div.shot-link-field {
 	margin-bottom: 24px;
 }
-input[type="submit"] {
-	background-color: $darkblue;
-	color: $lightgray;
-	padding:0.5em 1em 0.4em 1em;
+input[type="submit"], a.add_fields {
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	font-size:0.8em;
 	font-weight:600;
+}
+a.add_fields {
+	color: $darkblue;
+	background-color: none;
+	border: 2px solid $darkblue;
+	padding:0.7em 1em 0.5em 1em;
+}
+input[type="submit"] {
+	background-color: $darkblue;
+	color: $lightgray;
+	padding:0.5em 1em 0.4em 1em;
 }
 input[type="submit"]:hover {
 	cursor:pointer;
@@ -114,3 +125,20 @@ div.submit-action {
 	float:right;
 	margin-top:6px;
 }
+a.remove_fields {
+	float:right;
+	font-weight:600;
+	letter-spacing: 0.15em;
+	margin-bottom:0;
+	text-transform: uppercase;
+	font-size:0.6em;
+	margin-top: 7px;
+}
+div.links {
+	clear:both;
+}
+div.links > div.nested-fields {
+	margin-bottom:60px;
+}
+
+
