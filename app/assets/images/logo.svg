@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="86px" height="86px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo" transform="translate(-18.000000, -18.000000)">
+            <polygon id="Triangle" fill="#535E6A" transform="translate(90.751190, 31.248810) rotate(45.000000) translate(-90.751190, -31.248810) " points="90.754556 12.5087973 115.499927 49.9888226 66.0024527 49.9888226"></polygon>
+            <polygon id="Triangle" fill="#6D7680" transform="translate(69.000000, 53.000000) scale(-1, -1) rotate(45.000000) translate(-69.000000, -53.000000) " points="78.1923882 40.9791847 93.7487373 65.0208153 44.2512627 65.0208153 59.1005051 41.6862915"></polygon>
+            <polygon id="Triangle" fill="#535E6A" transform="translate(52.750000, 69.250000) rotate(45.000000) translate(-52.750000, -69.250000) " points="43.5576118 58.2898449 62.6494949 57.5827381 77.4987373 80.9172619 28.0012627 80.9172619"></polygon>
+            <polygon id="Triangle" fill="#6D7680" transform="translate(31.250000, 90.750000) scale(-1, -1) rotate(45.000000) translate(-31.250000, -90.750000) " points="31.25 72.0116703 55.9987373 109.48833 6.50126266 109.48833"></polygon>
+        </g>
+    </g>
+</svg>
