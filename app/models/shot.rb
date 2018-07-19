@@ -10,4 +10,6 @@ class Shot < ApplicationRecord
 
   	scope :published, -> (published) { where published: published }
 
+  	validates :name, presence: true
+
 end
