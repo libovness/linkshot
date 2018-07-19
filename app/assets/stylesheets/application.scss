@@ -16,24 +16,24 @@
 
 @font-face{
 	font-family:'Verlag';
-	src: font-url('Verlag-Book.eot');
-		src:font-url('Verlag-Book.eot');
-		src:font-url('Verlag-Book.eot?#iefix') format('embedded-opentype'),
-			font-url('Verlag-Book.woff') format('woff'),
-			font-url('Verlag-Book.ttf') format('truetype'),
-			font-url('Verlag-Book.svg#Verlag-Book') format('svg');
+	src: asset-url('Verlag-Book.eot');
+		src:asset-url('Verlag-Book.eot');
+		src:asset-url('Verlag-Book.eot?#iefix') format('embedded-opentype'),
+			asset-url('Verlag-Book.woff') format('woff'),
+			asset-url('Verlag-Book.ttf') format('truetype'),
+			asset-url('Verlag-Book.svg#Verlag-Book') format('svg');
 	font-weight:normal;
 	font-style:normal;
 }
 
 @font-face{
 	font-family:'Verlag';
-	src: font-url('Verlag-Black.eot');
-		src:font-url('Verlag-Black.eot');
-		src:font-url('Verlag-Black.eot?#iefix') format('embedded-opentype'),
-			font-url('Verlag-Black.woff') format('woff'),
-			font-url('Verlag-Black.ttf') format('truetype'),
-			font-url('Verlag-Black.svg#Verlag-Bold') format('svg');
+	src: asset-url('Verlag-Black.eot');
+		src:asset-url('Verlag-Black.eot');
+		src:asset-url('Verlag-Black.eot?#iefix') format('embedded-opentype'),
+			asset-url('Verlag-Black.woff') format('woff'),
+			asset-url('Verlag-Black.ttf') format('truetype'),
+			asset-url('Verlag-Black.svg#Verlag-Bold') format('svg');
 	font-weight:bold;
 	font-style:normal;
 }
