@@ -14,6 +14,30 @@
 
 @import "bootstrap";
 
+@font-face{
+	font-family:'Verlag';
+	src: font-url('Verlag-Book.eot');
+		src:font-url('Verlag-Book.eot');
+		src:font-url('Verlag-Book.eot?#iefix') format('embedded-opentype'),
+			font-url('Verlag-Book.woff') format('woff'),
+			font-url('Verlag-Book.ttf') format('truetype'),
+			font-url('Verlag-Book.svg#Verlag-Book') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face{
+	font-family:'Verlag';
+	src: font-url('Verlag-Black.eot');
+		src:font-url('Verlag-Black.eot');
+		src:font-url('Verlag-Black.eot?#iefix') format('embedded-opentype'),
+			font-url('Verlag-Black.woff') format('woff'),
+			font-url('Verlag-Black.ttf') format('truetype'),
+			font-url('Verlag-Black.svg#Verlag-Bold') format('svg');
+	font-weight:bold;
+	font-style:normal;
+}
+
 $lightgray: #E6E8E7;
 $lightblue: #879AAC;
 $darkblue: #3F4C58;
@@ -21,7 +45,7 @@ $verydarkblue: #2A2E32;
 
 body {
 	background-color: $lightgray;
-	font-family: "Verlag";
+	font-family: "verlag";
 	font-weight: 500;
 	font-size: 1.2em;
 	color: $darkblue;
@@ -31,7 +55,7 @@ h1, h2, h3, h4, h5, h6, p, label, a.shot-list-link  {
 	color: $darkblue;
 }
 h1, h2, h3, h4, h5, h6, a.shot-list-link {
-	font-weight: 800;
+	font-weight: bold;
 }
 h2#shot-name, a.shot-list-link {
 	margin-bottom: 0.6rem;
@@ -66,9 +90,8 @@ a:hover {
 }
 a.navbar-brand {
 	text-transform: uppercase;
-	font-weight: 800;
+	font-weight: bold;
 	letter-spacing: 0.1em;
-	font-family:"Verlag";
 	font-size:1.4em;
 	color: $darkblue;
 	margin-top:7px;
