@@ -1,7 +1,7 @@
 <%= form_with(model: shot, local: true) do |form| %>
   <% if shot.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(shot.errors.count, "error") %> prohibited this shot from being saved:</h2>
+      <h2>Uh oh!</h2>
       <ul>
       <% shot.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -21,12 +21,14 @@
   </div>
   <% if shot.id.nil? or shot.user == current_user %>
     <div class="actions">
-      <div class="publish-action">
-        <div class="custom-checkbox">
-          <%= form.check_box :published, default: :checked %>
-          <%= form.label :published, 'Make public' %>
+      <% if current_user %>
+        <div class="publish-action">
+          <div class="custom-checkbox">
+            <%= form.check_box :published, default: :checked %>
+            <%= form.label :published, 'Make public' %>
+          </div>
         </div>
-      </div>
+      <% end %>
       <div class="submit-action">
         <%= link_to_add_association 'add a link', form, :links, form_name: 'form', data: {association_insertion_node: '.links', association_insertion_method: :append } %>
         <%= form.submit 'Save' %>
