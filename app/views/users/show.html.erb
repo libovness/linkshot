@@ -5,13 +5,17 @@
 		<%= @user.name %>'s shots
 	<% end %>
 </h6>
-<ul id="shot-list">
-	<% @user.shots.each do |shot| %>
-		<li>
-			<%= link_to shot.name, shot, class: "shot-list-link" %>
-		</li>
-	<% end %>
-</ul>
+<% if @user.shots.empty? %>
+	<p class="no-shots-yet">No shots yet</p>
+<% else %>
+	<ul id="shot-list">
+		<% @user.shots.each do |shot| %>
+			<li>
+				<%= link_to shot.name, shot, class: "shot-list-link" %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>
 <% if @user == current_user %>
 	<%= link_to 'Create a new linkshot', new_shot_path, class: 'edit-link-list' %>
 <% end %>
