@@ -43,6 +43,10 @@ class ShotsController < ApplicationController
   # PATCH/PUT /shots/1
   # PATCH/PUT /shots/1.json
   def update
+    @shot.links.each do |link|
+      binding.pry
+      link.save_metadata
+    end
     respond_to do |format|
       if @shot.update(shot_params)
         format.html { redirect_to @shot, notice: 'Shot was successfully updated.' }

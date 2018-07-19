@@ -25,7 +25,6 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = Link.new(link_params)
-
     respond_to do |format|
       if @link.save
         format.html { redirect_to @link, notice: 'Link was successfully created.' }
@@ -76,4 +75,5 @@ class LinksController < ApplicationController
     def link_params
       params.require(:link).permit(:title, :url)
     end
+
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180718160252) do
+ActiveRecord::Schema.define(version: 20180719170813) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20180718160252) do
     t.boolean "suggested"
     t.boolean "accepted"
     t.integer "shot_id"
+    t.text "description"
+    t.string "image"
     t.index ["shot_id"], name: "index_links_on_shot_id"
   end
 
