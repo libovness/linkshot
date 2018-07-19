@@ -204,3 +204,69 @@ ul.link-list, ul#shot-list {
 ul.link-list > li {
 	margin-bottom:8px;
 }
+form {
+	margin-top: 10px;
+}
+div.mobile-signin {
+	display:none;
+}
+
+@media (max-width: 575.98px) { 
+	a.navbar-brand {
+		margin: 0 auto;
+		font-size: 1rem;
+		padding: 1px 0 0 0;
+	}
+	ul.navbar-nav {
+		display:none;
+	}
+	div.main {
+		box-shadow: none;
+		padding-top: 38px;
+		padding-bottom: 38px;
+	}
+	nav.navbar {
+		margin-bottom: 0px;
+		padding: 18px 0 12px 0;
+	}
+	h2#shot-name, a.shot-list-link {
+		font-size: 2rem;
+		line-height: 2.3rem;
+		margin-bottom: 0.9rem;
+	}
+	ul#shot-list > li {
+		margin-bottom: 35px;
+	}
+	h6#shot-page-title {
+		margin-top: 9px;
+		margin-bottom: 12px;
+	}
+	ul.link-list, ul#shot-list {
+		margin-bottom: 48px;
+	}
+	form {
+		margin-top: 3px;
+	}
+	label[for=shot_name] {
+		margin-bottom: 1px;
+	}
+	input#shot_name {
+		font-size: 1.3em;
+	}
+	div.shot-field {
+		margin-bottom: 0.9rem;
+	}
+	div.publish-action {
+		margin-bottom: 20px;
+	}
+	div.mobile-signin {
+		display: block;
+		text-align: center;
+		font-size: 1rem;
+		div {
+			p {
+				margin-bottom: 1.1rem;
+			}
+		}
+	}
+}
