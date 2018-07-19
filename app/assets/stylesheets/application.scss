@@ -270,9 +270,11 @@ a.navbar-brand {
 		display:none;
 	}
 	div.main {
-		box-shadow: none;
-		padding-top: 38px;
-		padding-bottom: 38px;
+		padding: 42px 36px;
+	}
+	div.main-row {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
 	}
 	nav.navbar {
 		margin-bottom: 0px;
