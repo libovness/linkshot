@@ -19,7 +19,11 @@ class Link < ApplicationRecord
 		real_domain = domain.domain
 		agent.keep_alive = false
 		if real_domain == 'amazon.com'
-			self.title = page.at('#productTitle').children.text
+			if page.at('h1#title').at('span').nil?
+				self.title = page.title
+			else 
+				self.title = page.at('h1#title').at('span').text
+			end
 		else
 			self.title = page.title 
 		end
