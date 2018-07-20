@@ -31,8 +31,17 @@ class Link < ApplicationRecord
 		if real_domain == 'amazon.com'
 			leftCol = page.search('#leftCol')
 			images = leftCol.search("img")
-			puts images.inspect
-			self.image = images[1].attributes["src"].value
+			if images.empty? 
+				images = page.search('#aud_left_col').search("img")
+				puts images.inspect
+				if images.empty?
+					self.image = nil
+				else 
+					self.image = images.first.attributes["src"].value
+				end
+			else
+				self.image = images[1].attributes["src"].value
+			end
 		elsif page.at("head meta[property='og:image']").nil?
 			self.image = nil
 		else 
