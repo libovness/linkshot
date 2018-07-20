@@ -81,6 +81,9 @@ h6#created {
 	margin-bottom: 1.4rem;
 	margin-top: 0;
 }
+span#beta {
+	color: $lightblue;
+}
 ul#shot-list li:first-child {
 	margin-top: 6px;
 }
@@ -373,7 +376,7 @@ p#notice {
 		font-size: 1.3em;
 	}
 	div.shot-field {
-		margin-bottom: 0.9rem;
+		margin-bottom: 2.4rem;
 	}
 	div.publish-action {
 		margin-bottom: 20px;
