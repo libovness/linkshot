@@ -10,10 +10,18 @@ class ShotsController < ApplicationController
   # GET /shots/1
   # GET /shots/1.json
   def show
+    page_title = 'Linkshot: ' + @shot.name
+    if @shot.user.nil?
+      page_description = @shot.name + ' — Shared via Linkshot'
+    else 
+      page_description = @shot.name + ' — Shared by ' + @shot.user.name + ' via Linkshot'
+    end
   end
 
   # GET /shots/new
   def new
+    page_title = 'New Linkshot'
+    page_description = 'Share a set of links'
     @shot = Shot.new
     2.times {@shot.links.build}
   end
@@ -33,7 +41,7 @@ class ShotsController < ApplicationController
       if @shot.save
         if @shot.user.nil?
           cookies[:created] = @shot.id
-          notice = '<em>One-time message:</em> If you want to save this shot in order to edit it later, you must <a href="/auth/twitter">Sign in with Twitter</a> now to claim it.'
+          notice = '<em>One-time message:</em> If you want to save this shot in order to edit it later, you must <a href="/auth/twitter?origin=/shot/save/' + @shot.slug + '">Sign in with Twitter</a> now to claim it.'
         else 
           notice = ''
         end 
@@ -44,6 +52,15 @@ class ShotsController < ApplicationController
         format.json { render json: @shot.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def save
+    @shot = set_shot
+    if current_user 
+      @shot.user = current_user
+      @shot.save
+    end
+    redirect_to @shot
   end
 
   # PATCH/PUT /shots/1

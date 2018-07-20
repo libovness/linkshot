@@ -11,13 +11,13 @@
 			<%= link_to link.url do %>
 				<div class="link-box">
 					<% if link.image.nil? %>
-						<%= image_tag 'logo.svg', class: "link-image" %>
+						<%= image_tag 'logo.svg', class: "link-image link-image-default" %>
 					<% else %>
 						<%= image_tag link.image, class: "link-image" %>
 					<% end %>
 					<div class="link-text">
-						<h4 class="link-title"><%= link.title %></h4>
-						<p><%= link.description %></p>
+						<h4 class="link-title"><%= truncate(link.title, :length => 65) %></h4>
+						<p><%= truncate(link.description, :length => 110) %></p>
 					</div>
 				</div>
 			<% end %>

@@ -1,0 +1,10 @@
+<meta name="title" content ="<%= full_title(yield(:title)) %>" />
+<meta name="description" content ='<%= page_description(yield(:description)) %>' />
+<link rel="canonical" href='<%= canonical_url(yield(:url)) %>' />
+<meta name="keywords" content="links shots share twitter" />
+<meta property="og:site_name" content="Linkshot" />
+<meta property="og:description" content="<%= page_description(yield(:description)) %>" />
+<meta property="og:url" content="<%= canonical_url(yield(:url)) %>"/>
+<meta property="og:image" content="<%= og_image(yield(:og_image)) %>" />
+<meta property="og:title" content="<%= full_title(yield(:title)) %>" />
+<meta property="og:type" content="website" />

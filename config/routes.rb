@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   root :to => "shots#new"
 
   get '/auth/:provider/callback', to: 'sessions#create'
+  get '/shot/save/:id', to: 'shots#save'
 
   delete '/logout', to: 'sessions#destroy'
 
