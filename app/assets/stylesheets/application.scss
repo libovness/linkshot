@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6, a.shot-list-link {
 	font-weight: bold;
 }
 h2#shot-name, a.shot-list-link {
-	margin-bottom: 2.0rem;
+	margin-bottom: 10px;
 	font-size:2.4rem;
 	margin-top: 0.4rem;
 	line-height: 48px;
@@ -286,9 +286,9 @@ div.link-box {
 		overflow:hidden;
 		h4.link-title {
 			margin-top:0.1rem;
-			margin-bottom: 0.8rem;
+			margin-bottom: 0.4rem;
 			border-bottom: 1px solid $lightgray;
-			line-height: 35px;
+			line-height: 36px;
 		}
 		p {
 			line-height: 24px;
@@ -304,7 +304,7 @@ div.actions {
 	margin-top: 72px;
 }
 ul.link-list {
-	margin-top:26px;
+	margin-top:38px;
 }
 p#notice {
 	padding: 1.8rem;
@@ -348,7 +348,7 @@ p#notice {
 	h2#shot-name, a.shot-list-link {
 		font-size: 2rem;
 		line-height: 2.3rem;
-		margin-bottom: 1.1rem;
+		margin-bottom: 10px;
 	}
 	ul#shot-list > li {
 		margin-bottom: 35px;
