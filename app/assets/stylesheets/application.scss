@@ -297,6 +297,15 @@ ul.link-list {
 		margin: 0 auto;
 		font-size: 1rem;
 		padding: 1px 0 0 0;
+		h4 {
+			font-size: 0.8rem;
+			margin-top: 4px;
+			margin-left: 4px;
+		}
+	}
+	img.logo {
+		width: 18px;
+		height: 18px;
 	}
 	ul.navbar-nav {
 		display:none;
