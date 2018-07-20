@@ -5,7 +5,15 @@
 <ul class="link-list">
 	<% @shot.links.each do |link| %>
 		<li>
-			<%= link_to link.title, link.url %>
+			<%= link_to link.url do %>
+				<div class="link-box">
+					<%= image_tag link.image, class: "link-image" %>
+					<div class="link-text">
+						<h4 class="link-title"><%= link.title %></h4>
+						<p><%= link.description %></p>
+					</div>
+				</div>
+			<% end %>
 		</li>
 	<% end %>
 </ul>
