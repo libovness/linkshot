@@ -27,7 +27,11 @@ class Link < ApplicationRecord
 		else
 			self.title = page.title 
 		end
-		self.description = page.at("head meta[name='description']").attributes["content"].value
+		if page.at("head meta[name='description']").nil?
+			self.description = page.at("head meta[property='og:description']").attributes["content"].value
+		else 
+			self.description = page.at("head meta[name='description']").attributes["content"].value
+		end
 		if real_domain == 'amazon.com'
 			leftCol = page.search('#leftCol')
 			images = leftCol.search("img")
