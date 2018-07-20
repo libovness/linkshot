@@ -228,7 +228,7 @@ ul.link-list, ul#shot-list {
 }
 
 ul.link-list > li {
-	margin-bottom:8px;
+	margin-bottom:25px;
 }
 form {
 	margin-top: 10px;
@@ -271,8 +271,9 @@ div.link-box {
 		overflow:hidden;
 		h4.link-title {
 			margin-top:0.2rem;
-			margin-bottom: 0.7rem;
+			margin-bottom: 0.8rem;
 			border-bottom: 1px solid $lightgray;
+			line-height: 32px;
 		}
 		p {
 			line-height: 24px;
@@ -287,7 +288,9 @@ div.clear {
 div.actions {
 	margin-top: 72px;
 }
-
+ul.link-list {
+	margin-top:26px;
+}
 
 @media (max-width: 575.98px) { 
 	a.navbar-brand {
@@ -323,6 +326,9 @@ div.actions {
 	}
 	ul.link-list, ul#shot-list {
 		margin-bottom: 48px;
+	}
+	ul.link-list {
+		margin-top: 29px;
 	}
 	form {
 		margin-top: 3px;
@@ -364,7 +370,7 @@ div.actions {
 				margin-bottom: 0.8rem;
 				border-bottom: none;
 				line-height:24px;
-				font-size: 1.3rem;
+				font-size: 1.2rem;
 			}
 			p {
 				line-height: 24px;
