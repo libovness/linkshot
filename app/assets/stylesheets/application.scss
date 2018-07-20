@@ -83,6 +83,10 @@ h6#created {
 }
 span#beta {
 	color: $lightblue;
+	line-height:1.5rem;
+	font-size:0.9rem;
+	display:inline-block;
+	padding-top:4px;
 }
 ul#shot-list li:first-child {
 	margin-top: 6px;
@@ -112,7 +116,7 @@ a.navbar-brand {
 	margin-top:7px;
 }
 a.nav-link {
-	margin-top:12px;
+	margin-top:10px;
 }
 nav.navbar {
 	padding-left: 0;
