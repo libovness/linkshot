@@ -31,7 +31,13 @@ class ShotsController < ApplicationController
     end
     respond_to do |format|
       if @shot.save
-        format.html { redirect_to @shot, notice: 'Shot was successfully created.' }
+        if @shot.user.nil?
+          cookies[:created] = @shot.id
+          notice = '<em>One-time message:</em> If you want to save this shot in order to edit it later, you must <a href="/auth/twitter">Sign in with Twitter</a> now to claim it.'
+        else 
+          notice = ''
+        end 
+        format.html { redirect_to @shot, notice: notice }
         format.json { render :show, status: :created, location: @shot }
       else
         format.html { render :new }

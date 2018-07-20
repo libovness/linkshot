@@ -16,6 +16,18 @@
 
 @font-face{
 	font-family:'Verlag';
+	src: font-url('Verlag-BookItalic.eot');
+		src:font-url('Verlag-BookItalic.eot');
+		src:font-url('Verlag-BookItalic.eot?#iefix') format('embedded-opentype'),
+			font-url('Verlag-BookItalic.woff') format('woff'),
+			font-url('Verlag-BookItalic.ttf') format('truetype'),
+			font-url('Verlag-BookItalic.svg#Verlag-BookItalic') format('svg');
+	font-weight:normal;
+	font-style:italic;
+}
+
+@font-face{
+	font-family:'Verlag';
 	src: font-url('Verlag-Book.eot');
 		src:font-url('Verlag-Book.eot');
 		src:font-url('Verlag-Book.eot?#iefix') format('embedded-opentype'),
@@ -58,7 +70,7 @@ h1, h2, h3, h4, h5, h6, a.shot-list-link {
 	font-weight: bold;
 }
 h2#shot-name, a.shot-list-link {
-	margin-bottom: 0.6rem;
+	margin-bottom: 2.0rem;
 	font-size:2.4rem;
 	margin-top: 0.4rem;
 	line-height: 48px;
@@ -270,10 +282,10 @@ div.link-box {
 	div.link-text {
 		overflow:hidden;
 		h4.link-title {
-			margin-top:0.2rem;
+			margin-top:0.1rem;
 			margin-bottom: 0.8rem;
 			border-bottom: 1px solid $lightgray;
-			line-height: 32px;
+			line-height: 35px;
 		}
 		p {
 			line-height: 24px;
@@ -290,6 +302,15 @@ div.actions {
 }
 ul.link-list {
 	margin-top:26px;
+}
+p#notice {
+	padding: 1.8rem;
+	border: 1px solid $lightgray;
+	background-color: #fdfdfd;
+	margin-top: 0.4rem;
+	line-height: 24px;
+	margin-bottom: 3rem;
+	font-size: 1.0rem;
 }
 
 @media (max-width: 575.98px) { 
