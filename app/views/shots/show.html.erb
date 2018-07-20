@@ -7,7 +7,11 @@
 		<li>
 			<%= link_to link.url do %>
 				<div class="link-box">
-					<%= image_tag link.image, class: "link-image" %>
+					<% if link.image.nil? %>
+						<%= image_tag 'logo.svg', class: "link-image" %>
+					<% else %>
+						<%= image_tag link.image, class: "link-image" %>
+					<% end %>
 					<div class="link-text">
 						<h4 class="link-title"><%= link.title %></h4>
 						<p><%= link.description %></p>
