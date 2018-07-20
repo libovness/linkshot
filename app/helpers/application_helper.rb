@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def og_image(og_image)
-    base_og_image = "apple-icon.png"
+    base_og_image = "linkshot.png"
     if og_image.empty?
       base_og_image
     else

@@ -318,6 +318,17 @@ p#notice {
 	margin-bottom: 3rem;
 	font-size: 1.0rem;
 }
+div.byline {
+	text-align: center;
+	padding: 5rem 0 0 0;
+	p {
+		text-transform: uppercase;
+		color: $lightblue;
+		font-weight: bold;
+		font-size: 0.8rem;
+		letter-spacing: 0.1rem;
+	}
+}
 
 @media (max-width: 575.98px) { 
 	a.navbar-brand {
