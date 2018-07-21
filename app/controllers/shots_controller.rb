@@ -4,7 +4,7 @@ class ShotsController < ApplicationController
   # GET /shots
   # GET /shots.json
   def index
-    @shots = Shot.all
+    @shots = Shot.where(published: true, user: !nil).limit(10)
   end
 
   # GET /shots/1

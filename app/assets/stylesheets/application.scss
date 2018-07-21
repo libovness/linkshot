@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6, a.shot-list-link {
 h2#shot-name, a.shot-list-link {
 	margin-bottom: 10px;
 	font-size:2.4rem;
-	margin-top: 0.4rem;
+	margin-top: 0.1rem;
 	line-height: 48px;
 }
 h6#created {
@@ -240,8 +240,14 @@ img#small-avatar {
 	width: 20px;
 	margin-bottom:0;
 }
+ul {
+	list-style-type: none;
+	padding-left: 0;	
+	li {
+		text-indent: 0;
+	}
+}
 ul.link-list, ul#shot-list {
-	list-style-type: none;	
 	padding:0;
 	margin-left: 0;
 	margin-bottom:44px;
@@ -332,6 +338,11 @@ div.byline {
 		font-weight: bold;
 		font-size: 0.8rem;
 		letter-spacing: 0.1rem;
+	}
+}
+ul.shot-list {
+	li {
+		padding-bottom: 1.1rem;
 	}
 }
 

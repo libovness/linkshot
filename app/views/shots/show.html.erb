@@ -1,10 +1,7 @@
-<% unless notice == '' %>
+<% unless notice == '' or notice.nil? %>
 	<p id="notice"><%= notice.html_safe %></p>
 <% end %>
-<h2 id="shot-name"><%= @shot.name %></h2>
-<% unless @shot.user.nil? %>
-	<h6 id="created">Created by &nbsp; <%= image_tag @shot.user.profile_image, id: 'small-avatar', class: 'avatar' %> <%= @shot.user.name %></h6>
-<% end %>
+<%= render partial: 'shot_metadata', object: @shot, as: :shot %>
 <ul class="link-list">
 	<% @shot.links.each do |link| %>
 		<li>
@@ -16,8 +13,8 @@
 						<%= image_tag link.image, class: "link-image" %>
 					<% end %>
 					<div class="link-text">
-						<h4 class="link-title"><%= truncate(link.title, :length => 65) %></h4>
-						<p><%= truncate(link.description, :length => 110) %></p>
+						<h4 class="link-title"><%= truncate(link.title, :length => 65) unless link.title.nil? %></h4>
+						<p><%= truncate(link.description, :length => 110) unless link.description.nil? %></p>
 					</div>
 				</div>
 			<% end %>

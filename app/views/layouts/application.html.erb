@@ -20,6 +20,9 @@
               <h4>Linkshot <span id="beta">BETA</span></h4>
             <% end %>
   					<ul class="navbar-nav ml-auto">
+              <li>
+                <%= link_to 'Shots', shots_path, class: "nav-link" %>
+              </li>
 				      <% if current_user %>
 				          <li>
 				          	<%= link_to user_path(current_user), class: "nav-link" do %>
@@ -30,9 +33,9 @@
 				          <li>
 				          	<%= link_to 'log out', logout_path, method: :delete, class: "nav-link" %>
 				          </li>
-				        <% else %>
+				      <% else %>
 				          <li><%= link_to "Sign in with Twitter", "/auth/twitter", class: "nav-link" %></li>
-				        <% end %>
+				      <% end %>
 				    </ul>
   				</nav>
   			</div>
