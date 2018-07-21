@@ -34,7 +34,7 @@
 				          	<% end %>
 				          </li>
 				          <li>
-				          	<%= link_to 'log out', logout_path, method: :delete, class: "nav-link" %>
+				          	<%= link_to 'Log Out', logout_path, method: :delete, class: "nav-link" %>
 				          </li>
 				      <% else %>
 				          <li><%= link_to "Sign in with Twitter", "/auth/twitter", class: "nav-link" %></li>
@@ -58,4 +58,13 @@
       </div>
     </div>
   </body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4227199-9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-4227199-9');
+  </script>
 </html>
