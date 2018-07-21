@@ -39,6 +39,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'mechanize'
 gem 'pry'
 gem 'public_suffix'
+gem 'sitemap_generator'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
