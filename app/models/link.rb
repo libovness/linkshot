@@ -28,7 +28,11 @@ class Link < ApplicationRecord
 			self.title = page.title 
 		end
 		if page.at("head meta[name='description']").nil?
-			self.description = page.at("head meta[property='og:description']").attributes["content"].value
+			if page.at("head meta[property='og:description']").nil?
+				self.description = nil
+			else
+				self.description = page.at("head meta[property='og:description']").attributes["content"].value
+			end
 		else 
 			self.description = page.at("head meta[name='description']").attributes["content"].value
 		end
