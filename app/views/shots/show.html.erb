@@ -23,5 +23,5 @@
 </ul>
 <% if !@shot.user.nil? && @shot.user == current_user %>
 	<%= link_to 'Edit', edit_shot_path(@shot), class: 'edit-link-list' %>
-	<%= link_to "Delete", shot_path(shot), method: :delete %>
+	<%= link_to "Delete", shot_path(@shot), method: :delete %>
 <% end %>
